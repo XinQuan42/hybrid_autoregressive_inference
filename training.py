@@ -65,6 +65,7 @@ evaluator = InformationRetrievalEvaluator(queries, corpus, explanations, show_pr
 warmup_steps = math.ceil(len(train_examples)*num_epochs/train_batch_size*0.1) #10% of train data for warm-up
 logging.info("Warmup-steps: {}".format(warmup_steps))
 
+# Train the model2
 # Train the model
 model.fit(train_objectives=[(train_dataloader, train_loss)],
           evaluator=evaluator,
